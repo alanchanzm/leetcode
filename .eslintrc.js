@@ -6,5 +6,9 @@ module.exports = {
   },
   rules: {
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
+    'arrow-parens': ['error', 'as-needed'],
+    'comma-dangle': 'off',
+    'no-use-before-define': ['error', { functions: false }],
+    'no-param-reassign': 'off',
   },
 };
