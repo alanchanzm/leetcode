@@ -8,12 +8,15 @@
  * @return {number}
  */
 function singleNumber(nums) {
-  const map = new Map();
-  nums.forEach(num => {
-    if (map.has(num)) map.delete(num);
-    else map.set(num, true);
-  });
-  return map.keys().next().value;
+  return nums.reduce((a, b) => a ^ b); // 两次「异或」相互抵消
 }
+// function singleNumber(nums) {
+//   const map = new Map();
+//   nums.forEach(num => {
+//     if (map.has(num)) map.delete(num);
+//     else map.set(num, true);
+//   });
+//   return map.keys().next().value;
+// }
 
 export default singleNumber;
